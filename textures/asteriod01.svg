@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10pt"
+   height="10pt"
+   viewBox="0 0 3.5277779 3.5277777"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (f8dce91, 2019-08-02)"
+   sodipodi:docname="asteriod01.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient873">
+      <stop
+         style="stop-color:#010101;stop-opacity:1"
+         offset="0"
+         id="stop869" />
+      <stop
+         id="stop877"
+         offset="0.92419082"
+         style="stop-color:#464646;stop-opacity:1" />
+      <stop
+         style="stop-color:#606060;stop-opacity:1"
+         offset="1"
+         id="stop871" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient873"
+       id="radialGradient875"
+       cx="1.72927"
+       cy="295.21472"
+       fx="1.72927"
+       fy="295.21472"
+       r="1.72927"
+       gradientTransform="matrix(0.96174846,5.7147397e-7,-5.9307386e-7,0.99809947,0.10094267,0.58244184)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="32"
+     inkscape:cx="6.6718913"
+     inkscape:cy="7.1607133"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="mm"
+     inkscape:object-nodes="true"
+     inkscape:object-paths="false"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-global="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="662"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-293.47223)">
+    <path
+       style="fill:url(#radialGradient875);fill-opacity:1;stroke:none;stroke-width:0.04987367;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3.4797143,295.35672 c 2e-7,0.21581 0.043924,0.32336 -0.027013,0.51449 -0.053389,0.14385 -0.075607,0.33759 -0.2120444,0.40218 -0.2083481,0.0986 -0.2956599,0.26191 -0.3960369,0.40445 -0.2094149,0.29737 -0.8611981,0.32701 -1.0213076,0.21953 -0.1149316,-0.0772 -0.2979381,0.10807 -0.4271814,0.0779 -0.292395,-0.0682 -0.81315332,-0.32493 -0.77321974,-0.40275 0.11842417,-0.23076 -0.13301925,-0.3341 -0.32307231,-0.5604 -0.0843764,-0.10047 -0.11049899,-0.4471 -0.15626883,-0.58424 -0.04368752,-0.13088 -0.10895133,-0.0518 -0.10895125,-0.17038 1.68e-6,-0.33662 0.05901965,-0.70775 0.21988696,-0.97976 0.0902234,-0.15256 0.10499736,0.0485 0.37433967,-0.34056 0.11112138,-0.16052 0.33556788,-0.10475 0.5377087,-0.17485 0.2112233,-0.0732 0.4026496,-0.26871 0.6319535,-0.26871 0.1870001,0 0.3672036,0.0291 0.5363292,0.083 0.1919813,0.0612 0.1299096,0.10478 0.2870801,0.22368 0.1667716,0.12616 0.3968365,0.23102 0.5546543,0.41688 0.1623924,0.19124 0.2046051,0.39106 0.2647888,0.63376 0.030613,0.12346 -0.019524,0.46228 0.038354,0.50576 z"
+       id="path866"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssssssscssssssssc" />
+  </g>
+</svg>
