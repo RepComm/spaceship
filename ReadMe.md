@@ -1,10 +1,18 @@
-# Graphing a quadratic function
+# Spaceship
 
-I was studying to get myself a high ASVAB score (which worked out.. 96 baby!)
-and wrote this little grapher for quadratic functions.
+2d space sandbox multiplayer html5 game
 
-It's been expanded to look pretty and render with interaction.
-
-[Live Demo](https://repcomm.github.io/quadgraph)
+[Live Demo](https://repcomm.github.io/spaceship)
 
 ![example.png](example.png)
+
+Planned features:
+- Basic modular ship/station building
+- Basic physics to play with
+- Deformable planets
+- Basic collision
+- Basic multiplayer over LAN (WebRTC)
+- Automated bots using local script modules
+- Reprogrammable inputting (including for scripts)
+- Large scale space
+- Vector based rendering
