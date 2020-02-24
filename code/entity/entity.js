@@ -1,52 +1,42 @@
 
-import {Collider} from "../colliders.js";
-
 class Entity {
-    constructor () {
-        this.x = 0;
-        this.y = 0;
-        this.rotation = 0;
-        this.velocity = {x:0, y:0, abs:0};
-        this.rotationalVelocity = 0;
-        /**@type {Path2D} */
-        this.path;
-        this.mass = 0.1;
-        this.isDynamic = true;
-        this.friction = 0;
-        this.massIsScale = false;
-        /**@type {Collider} */
-        this.collider;
-        this.scale = 1;
-    }
+  /**@param {import("../api.js").default} api*/
+  constructor(api) {
+    this.api = api;
+    /**@type {Path2D} */
+    this.path;
+    /**@type {p2.Body} */
+    this.body;
+    /**@type {Boolean} */
+    this.isGravitySource = false;
+  }
 
-    addForce (x, y) {
-        this.velocity.x += x;
-        this.velocity.y += y;
-        this.velocity.abs = Math.sqrt(Math.pow(this.velocity.x, 2) + Math.pow(this.velocity.y, 2));
-    }
+  /**@param {Path2D} path*/
+  setPath(path) {
+    this.path = path;
+  }
 
-    mulForce (val) {
-        this.velocity.x *= val;
-        this.velocity.y *= val;
-        this.velocity.abs = Math.sqrt(Math.pow(this.velocity.x, 2) + Math.pow(this.velocity.y, 2));
-    }
+  /**
+   * @param {CanvasRenderingContext2D} ctx 
+   */
+  render(ctx=this.api.ctx) {
+  }
 
-    step () {
-        if (this.isDynamic) {
-            this.rotation += this.rotationalVelocity / this.mass;
-            this.x += this.velocity.x / this.mass;
-            this.y += this.velocity.y / this.mass;
-        }
-        this.collider.x = this.x;
-        this.collider.y = this.y;
-    }
+  get x () {
+    return this.body.position[0];
+  }
 
-    setPath (path) {
-        this.path = path;
-    }
+  set x (v) {
+    this.body.position[0] = v;
+  }
 
-    render (ctx) {
-    }
+  get y () {
+    return this.body.position[1];
+  }
+
+  set y (v) {
+    this.body.position[1] = v;
+  }
 }
 
-export {Entity};
+export { Entity };

@@ -65,13 +65,6 @@ let magnitude = (x, y)=> {
     return Math.sqrt(x*x, y*y);
 }
 
-let direction = (x1, y1, x2, y2)=>{
-    x1 = x1 - x2
-    y1 = y1 - y2
-    x2 = magnitude (x1, y1);
-    x1 /= x2;
-    y1 /= x2;
-    return {x:x1, y:y1};
-}
+let direction = (x1, y1, x2, y2) => Math.atan2(y2 - y1, x2 - x1);
 
 export {Utils, dist, lerp, degrees, radians, pi, ndist, magnitude, direction};

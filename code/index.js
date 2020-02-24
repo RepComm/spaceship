@@ -5,47 +5,42 @@ import { Ship } from "./entity/ship.js";
 import { Planetoid } from "./entity/planetoid.js";
 import { ShipController } from "./controller/shipcontroller.js";
 import { InputManager } from "./input.js";
-import { Circle } from "./colliders.js";
+import API from "./api.js";
 
-let canvas = get("canvas");
-let inputManager = new InputManager(document.body);
-let renderer = new Renderer(canvas, true, 1);
+let api = new API();
+api.p2 = p2;
+api.pworld = new p2.World({
+  gravity: [0, 0],
+  applyDamping:false,
+  applyGravity:false
+});
+api.canvas = get("canvas");
+api.input = new InputManager(document.body);
+api.renderer = new Renderer(api, true, 1);
 
-let ship = new Ship();
-ship.collider = new Circle();
-ship.collider.radius = 0.2;
-let shipController = new ShipController(inputManager, ship);
-
-console.log(ship);
-
-for (let i=0; i<100; i++) {
-    let pl = new Planetoid();
-    pl.collider = new Circle();
-    pl.x = (Math.random()*200)*2-1;
-    pl.y = (Math.random()*200)*2-1;
-    pl.mass = Math.random()*10;
-    pl.color = "#" + parseInt(Math.random()*0xffff);
-    pl.scale = pl.mass/5;
-    pl.collider.radius = pl.scale;
-    pl.velocity.x = Math.random()*2-1;
-    pl.velocity.y = Math.random()*2-1;
-    pl.rotationalVelocity = Math.random()/8;
-    renderer.addEntity(pl);
+for (let i=0; i<200; i++) {
+let planet1 = new Planetoid(api);
+planet1.x = Math.random()*500;
+planet1.y = Math.random()*500;
+api.renderer.addEntity(planet1);
 }
 
-renderer.addEntity(ship);
+let ship = new Ship(api);
+console.log(ship);
+let shipController = new ShipController(api, ship);
+api.renderer.addEntity(ship);
 
-on(canvas, "wheel", (evt) => {
-    evt.preventDefault();
-    renderer.addZoom((evt.deltaY * renderer.zoom) / 50);
+on(api.canvas, "wheel", (evt) => {
+  evt.preventDefault();
+  api.renderer.addZoom((evt.deltaY * api.renderer.zoom) / 50);
 });
 
 let handleInput = () => {
-    shipController.step();
-    renderer.setCenter(ship.x, ship.y);
-    renderer.setCursor(inputManager.mouse.x, inputManager.mouse.y);
+  shipController.step();
+  api.renderer.setCenter(ship.x, ship.y);
+  api.renderer.setCursor(api.input.mouse.x, api.input.mouse.y);
 };
 
 setInterval(() => {
-    handleInput();
+  handleInput();
 }, 1000 / 60);
